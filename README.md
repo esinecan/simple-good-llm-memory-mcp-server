@@ -1,6 +1,6 @@
 # Skynet Memory MCP
 
-Production-grade memory system extracted from the Skynet digital person project. Provides Claude Code with sophisticated memory capabilities including hybrid search, knowledge graph relationships, and automatic context management.
+Memory system extracted from the Skynet digital person project. Provides Claude Code with sophisticated memory capabilities including hybrid search, knowledge graph relationships, and automatic context management.
 
 ## Quick Start
 
