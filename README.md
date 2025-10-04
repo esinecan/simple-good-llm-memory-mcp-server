@@ -1,7 +1,3 @@
-# Skynet Memory MCP
-
-Memory system extracted from the Skynet digital person project. Provides Claude Code with sophisticated memory capabilities including hybrid search, knowledge graph relationships, and automatic context management.
-
 ## Quick Start
 
 ### 1. Start Services
@@ -14,16 +10,16 @@ This starts:
 - **ChromaDB** (port 8000) - Vector storage for semantic search
 - **Neo4j** (ports 7474, 7687) - Knowledge graph for relationships
 
-### 2. Configure in Claude Code
+### 2. Configure in llm client
 
-Type `/mcp` in Claude Code and add:
+Type `/mcp` in llm client and add:
 
 ```json
 {
   "mcpServers": {
     "skynet-memory": {
       "command": "node",
-      "args": ["/Users/eren-can.sinecan/dev2/compound-memory-mcp-suite/skynet-memory-mcp/dist/index.js"],
+      "args": ["/Users/PROECT_DIRECTORY/dist/index.js"],
       "env": {
         "CHROMA_URL": "http://localhost:8000",
         "NEO4J_URI": "bolt://localhost:7687",
@@ -35,7 +31,7 @@ Type `/mcp` in Claude Code and add:
 }
 ```
 
-### 3. Restart Claude Code
+### 3. Restart llm client
 
 Changes take effect after restart.
 
@@ -125,20 +121,6 @@ npm run build
 # Type check
 npm run type-check
 ```
-
-## Extracted From
-
-This is a standalone extraction of the memory system from the [Skynet Agent](../../../skynet-agent) project, which is building a digital person with:
-- Dual-layer memory (automatic RAG + conscious volitional)
-- LangGraph-powered autonomous execution
-- Full cognitive architecture
-- Plans for physical embodiment (servo chassis + sensors)
-
-## Documentation
-
-- [SETUP_CLAUDE_CODE.md](./SETUP_CLAUDE_CODE.md) - Detailed setup instructions
-- [EXTRACTION_PLAN.md](../EXTRACTION_PLAN.md) - How this was extracted
-
 ## License
 
 MIT
